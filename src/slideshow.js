@@ -422,18 +422,15 @@ function Slideshow(slideshow_options) {
 		var slides = slide.div;
 
 		slides.bind(TouchMouseEvent.DOWN, function(e) {
-			e.preventDefault();
 			startX = e.pageX;
 			endX = startX;
 		});
 
 		slides.bind(TouchMouseEvent.MOVE, function(e) {
-			e.preventDefault();
 			endX = e.pageX;
 		});
 
 		slides.bind(TouchMouseEvent.UP, function(e) {
-			e.preventDefault();
 			var slideIndex = slides.index($(this));
 
 			//disable autoplay when user clicks next/prev buttons
